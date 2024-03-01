@@ -1,0 +1,40 @@
+.head {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.filter-Box {
+    display: flex;
+    background-color: #181818;
+    width: 40%;
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.filter-item {
+    color: #ffffff;
+}
+
+.card-container && key:Industry {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    background-color: #181818;
+    color: #ffffff;
+}
