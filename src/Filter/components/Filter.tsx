@@ -1,12 +1,9 @@
 import React from 'react'
 import '../styles/Filter.css'
 import { Stock_ } from '../data/FilterData'
-// import Box from "@mui/material/Box";
-// import List from "@mui/material/List";
 import Card from 'react-bootstrap/Card';
 import { Container } from 'react-bootstrap';
 import { Autocomplete, Chip, Stack, TextField } from '@mui/material';
-// import { ListRow } from "./ListRow";
 
 const Filter = (): JSX.Element => {
     const categories = [...new Set(Stock_.map(stock => stock.category))]; // Extract unique categories
@@ -23,21 +20,27 @@ const Filter = (): JSX.Element => {
                     freeSolo
                     renderTags={(value: readonly string[], getTagProps) =>
                         value.map((option: string, index: number) => (
-                            <Chip variant="outlined" label={option} {...getTagProps({ index })} />
+                            <Chip
+                                variant="outlined"
+                                label={option}
+                                style={{ margin: 2, color: 'white', backgroundColor: '#53ACFF', height: '70%' }}
+                                {...getTagProps({ index })}
+                            />
                         ))
                     }
+
                     renderInput={(params) => (
                         <TextField
                             {...params}
                             variant="filled"
                             label="filter"
                             placeholder="Favorites"
+                            className='renderInput'
                         />
                     )}
                 />
             </Stack>
             <div className='filter-item'>
-
                 {categories.map(category => (
                     <div key={category}>
                         <h2>{category}</h2>
